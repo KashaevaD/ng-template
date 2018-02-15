@@ -1,0 +1,29 @@
+.birds-page-row {
+  &__number,
+  &__name,
+  &__photo {
+    padding-right: 10px;
+  }
+
+  &__number {
+    width: 50px;
+  }
+
+  &__name {
+    flex: 1;
+  }
+
+  &__photo {
+    width: 300px;
+  }
+
+  &__age {
+    width: 50px;
+  }
+
+  &__photo-img{
+    width: 150px;
+    height: auto;
+    border-radius: 20px;
+  }
+}

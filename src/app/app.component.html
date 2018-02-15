@@ -1,0 +1,18 @@
+<nav mat-tab-nav-bar>
+  <a mat-tab-link
+     routerLink="/animals"
+     routerLinkActive="mat-tab-link--active"
+     #animalsRLA="routerLinkActive"
+     [active]="animalsRLA.isActive">
+    {{ 'Animals' }}
+  </a>
+  <a mat-tab-link
+     routerLink="/birds"
+     routerLinkActive="mat-tab-link--active"
+     #birdsRLA="routerLinkActive"
+     [active]="birdsRLA.isActive">
+    {{ 'Birds' }}
+  </a>
+</nav>
+
+<router-outlet></router-outlet>

@@ -1,0 +1,9 @@
+<div class="page-layout__header">
+  <ng-content select="[header]"></ng-content>
+</div>
+
+<div class="page-layout__table">
+  <ng-container *ngFor="let item of items; let i = index">
+    <ng-container *ngTemplateOutlet="itemTemplate; context: { item: item, index: i }"></ng-container>
+  </ng-container>
+</div>

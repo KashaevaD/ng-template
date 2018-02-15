@@ -1,0 +1,29 @@
+.animals-page-row {
+  &__number,
+  &__name,
+  &__photo {
+    padding-right: 10px;
+  }
+
+  &__number {
+    width: 50px;
+  }
+
+  &__name {
+    width: 200px;
+  }
+
+  &__photo {
+    width: 200px;
+  }
+
+  &__description {
+    flex: 1;
+  }
+
+  &__photo-img{
+    width: 150px;
+    height: auto;
+    border-radius: 20px;
+  }
+}

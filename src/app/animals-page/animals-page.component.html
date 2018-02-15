@@ -1,0 +1,29 @@
+<ng-template #itemTemplate let-animal="item" let-i="index">
+  <app-row>
+    <div class="animals-page-row__number">
+      {{ i +1 }}
+    </div>
+    <div class="animals-page-row__photo">
+      <img class="animals-page-row__photo-img"
+           [src]="animal.photo">
+    </div>
+    <div class="animals-page-row__name">
+      {{ animal.name }}
+    </div>
+    <div class="animals-page-row__description">
+      {{ animal.description }}
+    </div>
+  </app-row>
+</ng-template>
+
+
+<app-page-layout [itemTemplate]="itemTemplate"
+                 [items]="items">
+  <app-row header
+           [header]="true">
+    <div class="animals-page-row__number">№</div>
+    <div class="animals-page-row__photo">Photo</div>
+    <div class="animals-page-row__name">Name</div>
+    <div class="animals-page-row__description">Description</div>
+  </app-row>
+</app-page-layout>
