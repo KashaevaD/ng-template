@@ -11,12 +11,12 @@ export class AnimalsPageComponent implements OnInit {
   public items: IAnimal[] = [
     {
       name: 'Alice',
-      photo: 'http://pluspng.com/img-png/png-fox-cartoon-tod-fox-and-the-hound-by-jackspade2012-1024.png',
+      photo: './assets/image/fox.png',
       description: 'Foxes are small-to-medium-sized, omnivorous mammals belonging to several genera of the family Canidae'
     },
     {
       name: 'Bloom',
-      photo: 'http://images.clipartpanda.com/gray-wolf-clip-art-262-cartoon-wolf.jpg',
+      photo: './assets/image/wolf.jpg',
       description: 'The gray wolf (Canis lupus), also known as the timber wolf or western wolf, is a canine native to the wilderness and remote areas of Eurasia and North America.'
     },
   ];
