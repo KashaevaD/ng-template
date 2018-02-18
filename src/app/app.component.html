@@ -13,6 +13,13 @@
      [active]="birdsRLA.isActive">
     {{ 'Birds' }}
   </a>
+  <a mat-tab-link
+     routerLink="/timing"
+     routerLinkActive="mat-tab-link--active"
+     #timingRLA="routerLinkActive"
+     [active]="timingRLA.isActive">
+    {{ 'Timing' }}
+  </a>
 </nav>
 
 <router-outlet></router-outlet>

@@ -1,0 +1,62 @@
+<ng-template #itemTemplate let-animal="item" let-i="index">
+  <app-row>
+    <div class="timing-row__number">
+      {{ i +1 }}
+    </div>
+    <div class="timing-row__name">
+      {{ animal.name }}
+    </div>
+  </app-row>
+</ng-template>
+
+
+<h3>Ng-template</h3>
+<button mat-raised-button
+        color="primary"
+        (click)="isShowNgTemplate = true">
+  Show
+</button>
+
+<div *ngIf="isShowNgTemplate">
+  <ng-container *ngFor="let item of items; let i = index">
+    <ng-container *ngTemplateOutlet="itemTemplate; context: { item: animal, index: i }"></ng-container>
+  </ng-container>
+</div>
+
+<br>
+<br>
+<br>
+
+<h3>Simple template</h3>
+<button mat-raised-button
+        color="primary"
+        (click)="isShowSimple = true">
+  Show
+</button>
+
+<div *ngIf="isShowSimple">
+  <ng-container *ngFor="let item of items; let i = index">
+    <app-row>
+      <div class="timing-row__number">
+        {{ i +1 }}
+      </div>
+      <div class="timing-row__name">
+        {{ animal.name }}
+      </div>
+    </app-row>
+  </ng-container>
+</div>
+
+<br>
+<br>
+<br>
+
+<h3>ViewContainerRef</h3>
+<button mat-raised-button
+        color="primary"
+        (click)="showViewContainerRef()">
+  Show
+</button>
+<div #insertTemplate></div>
+
+

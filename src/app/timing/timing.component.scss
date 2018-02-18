@@ -1,0 +1,19 @@
+:host(.timing) {
+  display: block;
+  padding: 40px;
+}
+
+.timing-row {
+  &__number,
+  &__name {
+    padding-right: 10px;
+  }
+
+  &__number {
+    width: 50px;
+  }
+
+  &__name {
+    flex: 1;
+  }
+}
