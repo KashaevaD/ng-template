@@ -1,0 +1,33 @@
+<h1 class="birds-page-row__title">
+  Birds list
+</h1>
+
+<div class="birds-page-row__header">
+  <app-row header [header]="true">
+    <div class="birds-page-row__number">№</div>
+    <div class="birds-page-row__photo">Photo</div>
+    <div class="birds-page-row__name">Name</div>
+    <div class="birds-page-row__age">Age</div>
+  </app-row>
+</div>
+
+<div class="birds-page-row__table" *ngFor="let item of items; let i = index">
+  <app-row>
+    <div class="birds-page-row__number">
+      {{ i +1 }}
+    </div>
+    <div class="birds-page-row__photo">
+      <img class="birds-page-row__photo-img" [src]="bird.photo">
+    </div>
+    <div class="birds-page-row__name">
+      {{ bird.name }}
+    </div>
+    <div class="birds-page-row__age">
+      {{ bird.age }}
+    </div>
+  </app-row>
+</div>
+
+<div class="birds-page-row__footer">
+  Infomation for user: {{items.length}} entities
+</div>

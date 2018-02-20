@@ -4,8 +4,7 @@
       {{ i +1 }}
     </div>
     <div class="birds-page-row__photo">
-      <img class="birds-page-row__photo-img"
-           [src]="bird.photo">
+      <img class="birds-page-row__photo-img" [src]="bird.photo">
     </div>
     <div class="birds-page-row__name">
       {{ bird.name }}
@@ -17,14 +16,13 @@
 </ng-template>
 
 
-<app-page-layout [itemTemplate]="itemTemplate"
-                 [items]="items">
-  <app-row header
-           [header]="true">
+<app-page-layout [itemTemplate]="itemTemplate" [items]="items">
+  <ng-container title>Birds list</ng-container>
+
+  <app-row header [header]="true">
     <div class="birds-page-row__number">№</div>
     <div class="birds-page-row__photo">Photo</div>
     <div class="birds-page-row__name">Name</div>
     <div class="birds-page-row__age">Age</div>
   </app-row>
 </app-page-layout>
-

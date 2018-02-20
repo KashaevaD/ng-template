@@ -11,4 +11,21 @@
     flex: 1;
     width: 700px;
   }
+
+  &__footer {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    width: 100%;
+    border-top: 3px solid #90CAF9;
+  }
+
+  &__title {
+    color: #90CAF9;
+    margin-top: 0;
+    margin-bottom: 35px;
+  }
 }

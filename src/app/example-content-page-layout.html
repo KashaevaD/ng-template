@@ -7,7 +7,7 @@
 
 <div class="page-layout__table">
   <ng-container *ngFor="let item of items; let i = index">
-    <ng-container *ngTemplateOutlet="itemTemplate; context: { item: item, index: i }"></ng-container>
+    <ng-content select="[row]"></ng-content>
   </ng-container>
 </div>
 
