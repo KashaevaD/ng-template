@@ -5,10 +5,8 @@
   <ng-content select="[header]"></ng-content>
 </div>
 
-<div class="page-layout__table">
-  <ng-container *ngFor="let item of items; let i = index">
-    <ng-content select="[row]"></ng-content>
-  </ng-container>
+<div class="page-layout__table" *ngFor="let item of items; let i = index">
+  <ng-content select="[row]"></ng-content>
 </div>
 
 <div class="page-layout__footer">
