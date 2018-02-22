@@ -1,14 +1,18 @@
 <h1 class="page-layout__title">
   <ng-content select="[title]"></ng-content>
 </h1>
+
 <div class="page-layout__header">
-  <ng-content select="[header]"></ng-content>
+  <div class="page-layout__row page-layout__row--header">
+    <ng-content select="[header]"></ng-content>
+  </div>
 </div>
 
 <div class="page-layout__table">
-  <ng-container *ngFor="let item of items; let i = index">
+  <div *ngFor="let item of items; let i = index" class="page-layout__row">
     <ng-content select="[row]"></ng-content>
-  </ng-container>
+    <ng-container *ngTemplateOutlet="itemTemplate; context: { item: item, index: i }"></ng-container>
+  </div>
 </div>
 
 <div class="page-layout__footer">
