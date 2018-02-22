@@ -8,11 +8,16 @@
   </div>
 </div>
 
+<<<<<<< HEAD
 <div class="page-layout__table">
   <div *ngFor="let item of items; let i = index" class="page-layout__row">
     <ng-content select="[row]"></ng-content>
     <ng-container *ngTemplateOutlet="itemTemplate; context: { item: item, index: i }"></ng-container>
   </div>
+=======
+<div class="page-layout__table" *ngFor="let item of items; let i = index">
+  <ng-content select="[row]"></ng-content>
+>>>>>>> 21697ea020700b26389e063e30e8c785fd794bda
 </div>
 
 <div class="page-layout__footer">
