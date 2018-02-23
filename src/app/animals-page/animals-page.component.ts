@@ -8,7 +8,7 @@ import { IAnimal } from '../../types/animal';
 })
 export class AnimalsPageComponent implements OnInit {
 
-  public items: IAnimal[] = [
+  public animals: IAnimal[] = [
     {
       name: 'Alice',
       photo: './assets/image/fox.png',

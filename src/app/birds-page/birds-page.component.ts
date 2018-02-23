@@ -9,7 +9,7 @@ import { IBird } from '../../types/bird';
 })
 export class BirdsPageComponent implements OnInit {
 
-  public items: IBird[] = [
+  public birds: IBird[] = [
     {
       name: 'Denny',
       photo: './assets/image/bird.png',

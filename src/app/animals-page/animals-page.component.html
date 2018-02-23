@@ -1,4 +1,12 @@
-<ng-template #itemTemplate let-animal="item" let-i="index">
+<!--
+<div *ngFor="let item of items; let i = index"
+     class="page-layout__row">
+  <ng-container *ngTemplateOutlet="itemTemplate;
+                context: { item: item, index: i }">
+  </ng-container>
+</div>-->
+
+<ng-template #animalTemplate let-animal="item" let-i="index">
   <div class="animals-page-row__number">
     {{ i +1 }}
   </div>
@@ -13,8 +21,7 @@
   </div>
 </ng-template>
 
-
-<app-page-layout [itemTemplate]="itemTemplate" [items]="items">
+<app-page-layout [itemTemplate]="animalTemplate" [items]="animals">
   <ng-container title>Animals list</ng-container>
 
   <ng-container header>
